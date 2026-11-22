@@ -30,7 +30,12 @@
       const img = new Image();
       img.loading = 'lazy'; img.decoding = 'async'; img.alt = pretty(it.name); img.src = it.src;
       img.onload = () => b.classList.add('ready');
-      img.onerror = () => { items = items.filter(x => x !== it); list = list.filter(x => x !== it); b.remove(); labels(); };
+      let tries = 0;
+      img.onerror = () => {
+        // a fresh upload can be listed before GitHub Pages has published the file: retry for a while
+        if (tries++ < 12) { setTimeout(() => { img.src = it.src + '?r=' + Date.now(); }, 5000 * Math.min(tries, 4)); return; }
+        items = items.filter(x => x !== it); list = list.filter(x => x !== it); b.remove(); labels();
+      };
       const cap = document.createElement('span'); cap.className = 'cap'; cap.textContent = pretty(it.name);
       b.append(img, cap);
       b.addEventListener('click', () => open(list.indexOf(it)));

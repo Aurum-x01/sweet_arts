@@ -174,40 +174,39 @@
     return a;
   };
 
-  function githubRepoInfo() {
+  function githubRepos() {
     const cfg = window.SITE_CONFIG || {};
     if (cfg.githubRepo) {
       const [owner, repo] = cfg.githubRepo.split('/');
-      return { owner, repo, branch: cfg.githubBranch };
+      return [{ owner, repo, branch: cfg.githubBranch }];
     }
     const host = location.hostname;
-    if (!host.endsWith('.github.io')) return null;
+    if (!host.endsWith('.github.io')) return [];
     const owner = host.split('.')[0];
     const seg = location.pathname.split('/').filter(Boolean)[0];
-    const repo = seg && !/\.html?$/i.test(seg) ? seg : host;
-    return { owner, repo, branch: cfg.githubBranch };
+    const out = [];
+    if (seg && !/\.html?$/i.test(seg)) out.push({ owner, repo: seg, branch: cfg.githubBranch }); // project site
+    out.push({ owner, repo: host, branch: cfg.githubBranch });                                      // user site
+    return out;
   }
 
   // Returns an array (maybe empty) or null if nothing could be read.
   // Order: live sources first (they reflect deletions immediately), photos.json as a fallback.
   window.loadPhotos = async function () {
     // 1) GitHub API - always the real current content of the photos folder
-    const gh = githubRepoInfo();
-    if (gh) {
+    for (const gh of githubRepos()) {
       try {
         const url = `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/photos` + (gh.branch ? `?ref=${gh.branch}` : '');
-        const r = await fetch(url);
-        if (r.ok) {
-          const j = await r.json();
-          if (Array.isArray(j)) {
-            const man = await fetchManifest();
-            const times = {};
-            (man || []).forEach(m => { times[m.name] = m.mtime || 0; });
-            return j.filter(f => f.type === 'file' && IMG_RE.test(f.name))
-              .map(f => ({ name: f.name, src: 'photos/' + encodeURIComponent(f.name), mtime: times[f.name] || 0 }));
-          }
-        }
-      } catch (e) {}
+        const r = await fetch(url, { cache: 'no-store' });
+        if (!r.ok) { console.info('[gallery] GitHub API', gh.owner + '/' + gh.repo, '->', r.status); continue; }
+        const j = await r.json();
+        if (!Array.isArray(j)) continue;
+        const man = await fetchManifest();
+        const times = {};
+        (man || []).forEach(m => { times[m.name] = m.mtime || 0; });
+        return j.filter(f => f.type === 'file' && IMG_RE.test(f.name))
+          .map(f => ({ name: f.name, src: 'photos/' + encodeURIComponent(f.name), mtime: times[f.name] || 0 }));
+      } catch (e) { console.info('[gallery] GitHub API failed', e); }
     }
 
     // 2) plain directory listing (local `python -m http.server`)

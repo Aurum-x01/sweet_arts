@@ -29,3 +29,11 @@ and open http://localhost:8000 — the gallery reads the `photos/` folder direct
 - Texts in both languages: `js/i18n.js`.
 - Name / brand: `SWEET ARTS` in the header of each page and in `js/i18n.js`.
 - Custom domain: put `owner/repo` into `js/config.js`.
+
+## Search engines / social previews (SEO)
+- Every page has title, description, canonical link, Open Graph + Twitter tags (link previews in Telegram / Discord / Facebook use `og-image.png`) and JSON-LD.
+- `sitemap.xml` (pages + all pictures from `photos/`) and `robots.txt` are generated automatically by `build-seo.py`.
+- The real site address is set automatically by the GitHub Action on the first push (from the `CNAME` file for your own domain, otherwise `https://<owner>.github.io/<repo>/`). To set it by hand: `python build-seo.py https://your-address/`
+- The repository must be **public**. After the site is online add it to Google Search Console (https://search.google.com/search-console) and Bing Webmaster Tools and submit `<your address>/sitemap.xml` — this is what makes the site show up in search faster.
+- When the prices page is ready: rename `prices1.html` to `prices.html`, delete the `noindex` line in it and add `'prices.html'` to `PAGES` in `build-seo.py`.
+- Replace `og-image.png` with your own 1200x630 picture any time.

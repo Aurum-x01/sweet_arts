@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prices — Sweet Arts</title>
+<meta name="theme-color" content="#07070d">
+<meta name="description" content="Commission prices at Sweet Arts: sketches, headshots, half-body portraits and full illustrations. Add-ons, terms and delivery times.">
+<!-- noindex: this is the hidden prices page. When you rename it to prices.html, delete the next line. -->
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/prices.html">
+<meta name="author" content="Sweet Arts">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sweet Arts">
+<meta property="og:title" content="Prices — Sweet Arts">
+<meta property="og:description" content="Commission prices at Sweet Arts: sketches, headshots, half-body portraits and full illustrations. Add-ons, terms and delivery times.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/prices.html">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sweet Arts — digital art portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prices — Sweet Arts">
+<meta name="twitter:description" content="Commission prices at Sweet Arts: sketches, headshots, half-body portraits and full illustrations. Add-ons, terms and delivery times.">
+<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/og-image.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="prices">
+<canvas id="bg"></canvas>
+<div class="blobs"><i></i><i></i><i></i></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">SWEET <b>ARTS</b></a>
+  <nav class="menu" id="menu">
+    <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+    <a href="gallery.html" data-nav="gallery" data-i18n="nav.gallery">Gallery</a>
+    <a href="prices.html" data-nav="prices" data-i18n="nav.prices">Prices</a>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="uk">UA</button></div>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <span class="kicker" data-i18n="pr.kicker">Commissions</span>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.4rem)" data-i18n="pr.title">Prices</h1>
+    <p data-i18n="pr.sub">Transparent pricing. Final cost depends on complexity — message me for an exact quote.</p>
+  </div>
+
+  <!-- TODO: change the prices below to your own -->
+  <div class="price-grid stagger">
+    <div class="card price-card" data-tilt>
+      <h3 data-i18n="t1.n">Sketch</h3><p class="muted" data-i18n="t1.d">Clean linework, perfect for ideas and drafts.</p>
+      <div class="amount"><small data-i18n="pr.from">from</small>$15</div>
+      <ul><li data-i18n="t1.f1">Line art, no colors</li><li data-i18n="t1.f2">1 character</li><li data-i18n="t1.f3">Delivery in 2–3 days</li></ul>
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      <h3 data-i18n="t2.n">Headshot</h3><p class="muted" data-i18n="t2.d">Expressive bust portrait with full color and shading.</p>
+      <div class="amount"><small data-i18n="pr.from">from</small>$35</div>
+      <ul><li data-i18n="t2.f1">Full color &amp; shading</li><li data-i18n="t2.f2">Simple background</li><li data-i18n="t2.f3">Delivery in 3–5 days</li></ul>
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card featured" data-tilt>
+      <span class="badge" data-i18n="pr.popular">Most popular</span>
+      <h3 data-i18n="t3.n">Half-body</h3><p class="muted" data-i18n="t3.d">Detailed character from the waist up.</p>
+      <div class="amount"><small data-i18n="pr.from">from</small>$60</div>
+      <ul><li data-i18n="t3.f1">Detailed rendering</li><li data-i18n="t3.f2">Custom pose &amp; outfit</li><li data-i18n="t3.f3">Delivery in 5–7 days</li></ul>
+      <a class="btn primary" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      <h3 data-i18n="t4.n">Full scene</h3><p class="muted" data-i18n="t4.d">A complete illustration with character(s) and background.</p>
+      <div class="amount"><small data-i18n="pr.from">from</small>$150</div>
+      <ul><li data-i18n="t4.f1">Full body + environment</li><li data-i18n="t4.f2">Dynamic lighting &amp; effects</li><li data-i18n="t4.f3">Delivery in 10–14 days</li></ul>
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+  </div>
+
+  <div class="two-col reveal">
+    <div class="card">
+      <h3 style="font-family:var(--fd)" data-i18n="ad.title">Add-ons</h3>
+      <ul class="rows">
+        <li><span data-i18n="ad1">Extra character</span><b>+70%</b></li>
+        <li><span data-i18n="ad2">Detailed background</span><b>+$40</b></li>
+        <li><span data-i18n="ad3">Commercial license</span><b>+50%</b></li>
+        <li><span data-i18n="ad4">Rush delivery</span><b>+30%</b></li>
+        <li><span data-i18n="ad5">Layered PSD file</span><b>+$20</b></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-family:var(--fd)" data-i18n="tm.title">Good to know</h3>
+      <ul class="dots">
+        <li data-i18n="tm1">50% upfront, the rest after the final approval.</li><li data-i18n="tm2">2 rounds of revisions are included.</li><li data-i18n="tm3">Prices are in USD; other currencies on request.</li>
+      </ul>
+    </div>
+  </div>
+
+  <section style="padding-bottom:90px">
+    <div class="cta reveal">
+      <h2 data-i18n="pr.cta.t">Ready to order?</h2>
+      <p data-i18n="cta.text">Commissions are open. Write to me with your idea and I'll reply within 24 hours.</p>
+      <a class="btn primary" href="index.html#contact"><span data-i18n="pr.cta.b">Get in touch</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Sweet Arts — <span data-i18n="foot.rights">All rights reserved.</span></span>
+    <span data-i18n="foot.note">Please do not use or repost my art without permission.</span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
