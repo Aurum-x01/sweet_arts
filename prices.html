@@ -1,1 +1,135 @@
-soon
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prices — Sweet Arts</title>
+<meta name="theme-color" content="#07070d">
+<meta name="description" content="Commission prices at Sweet Arts: avatars, half-body and full-body art, reference sheets. Payment terms, revisions and delivery times.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aurum-x01.github.io/sweet_arts/prices.html">
+<meta name="author" content="Sweet Arts">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sweet Arts">
+<meta property="og:title" content="Prices — Sweet Arts">
+<meta property="og:description" content="Commission prices at Sweet Arts: avatars, half-body and full-body art, reference sheets. Payment terms, revisions and delivery times.">
+<meta property="og:url" content="https://aurum-x01.github.io/sweet_arts/prices.html">
+<meta property="og:image" content="https://aurum-x01.github.io/sweet_arts/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sweet Arts — digital art portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prices — Sweet Arts">
+<meta name="twitter:description" content="Commission prices at Sweet Arts: avatars, half-body and full-body art, reference sheets. Payment terms, revisions and delivery times.">
+<meta name="twitter:image" content="https://aurum-x01.github.io/sweet_arts/og-image.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.pz-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.pz-grid>.card{grid-column:span 2}
+.pz-grid>.card:nth-child(n+4){grid-column:span 3}
+.pz-grid .amount{font-size:clamp(1.7rem,3vw,2.2rem);margin:16px 0 10px}
+.pz-grid .price-card>p.muted{flex:1}
+.pz-grid .note{display:inline-block;align-self:flex-start;margin-top:14px;padding:5px 14px;border-radius:99px;font-size:.85rem;font-weight:700;color:#fff;background:rgba(236,72,153,.18);border:1px solid rgba(236,72,153,.45)}
+.pz-grid .btn{margin-top:22px;justify-content:center}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.pz-grid{grid-template-columns:1fr 1fr}.pz-grid>.card,.pz-grid>.card:nth-child(n+4){grid-column:span 1}.terms{grid-template-columns:1fr}}
+@media(max-width:600px){.pz-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="prices">
+<canvas id="bg"></canvas>
+<div class="blobs"><i></i><i></i><i></i></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">SWEET <b>ARTS</b></a>
+  <nav class="menu" id="menu">
+    <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+    <a href="gallery.html" data-nav="gallery" data-i18n="nav.gallery">Gallery</a>
+    <a href="prices.html" data-nav="prices" data-i18n="nav.prices">Prices</a>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="uk">UA</button></div>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <span class="kicker" data-i18n="pr.kicker">Commissions</span>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.4rem)" data-i18n="pr.title">Prices</h1>
+    <p data-i18n="pr.sub">Transparent pricing. Final cost depends on complexity — message me for an exact quote.</p>
+  </div>
+
+  <div class="pz-grid stagger">
+    <div class="card price-card featured" data-tilt>
+      <span class="badge" data-i18n="pr.popular">Most popular</span>
+      <h3 data-i18n="pz.a.n">Avatar</h3><p class="muted" data-i18n="pz.a.d">Bust-up portrait, perfect for a profile picture.</p>
+      <div class="amount" data-i18n="pz.a.p">150–400 UAH</div>
+      
+      <a class="btn primary" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      
+      <h3 data-i18n="pz.h.n">Half-body</h3><p class="muted" data-i18n="pz.h.d">Character from the waist up with a pose of your choice.</p>
+      <div class="amount" data-i18n="pz.h.p">200–500 UAH</div>
+      
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      
+      <h3 data-i18n="pz.f.n">Full body</h3><p class="muted" data-i18n="pz.f.d">Full-length character illustration.</p>
+      <div class="amount" data-i18n="pz.f.p">400–1500 UAH</div>
+      <span class="note" data-i18n="pz.f.note">Complex pose: +450 UAH</span>
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      
+      <h3 data-i18n="pz.r.n">Reference sheet</h3><p class="muted" data-i18n="pz.r.d">Character reference sheet for your OC: views and details in one place.</p>
+      <div class="amount" data-i18n="pz.r.p">700–2000 UAH</div>
+      
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+    <div class="card price-card" data-tilt>
+      
+      <h3 data-i18n="pz.n.n">NSFW (18+)</h3><p class="muted" data-i18n="pz.n.d">Adult artwork, for clients 18 and older only.</p>
+      <div class="amount" data-i18n="pz.n.p">500–1000 UAH</div>
+      <span class="note" data-i18n="pz.n.note">18+ only</span>
+      <a class="btn ghost" href="index.html#contact" data-i18n="pr.order">Order this</a>
+    </div>
+  </div>
+
+  <div class="sec-head reveal" style="margin:70px 0 24px"><h2 data-i18n="pz.t.title">Terms of work</h2></div>
+  <div class="terms stagger">
+    <div class="card" data-tilt><div class="ico">💳</div><h3 data-i18n="pz.pay.t">Payment</h3><p data-i18n="pz.pay.d">50% prepayment after the sketch is approved (or 100% upfront), paid to a bank card.</p></div>
+    <div class="card" data-tilt><div class="ico">✏️</div><h3 data-i18n="pz.rev.t">Revisions</h3><p data-i18n="pz.rev.d">2–3 free revisions at the sketch stage. After coloring, only minor color changes.</p></div>
+    <div class="card" data-tilt><div class="ico">⏱️</div><h3 data-i18n="pz.time.t">Timeline</h3><p data-i18n="pz.time.d">From 5 to 12 days, depending on the complexity of the order.</p></div>
+  </div>
+
+  <section style="padding-bottom:90px">
+    <div class="cta reveal">
+      <h2 data-i18n="pr.cta.t">Ready to order?</h2>
+      <p data-i18n="cta.text">Commissions are open. Write to me with your idea and I'll reply within 24 hours.</p>
+      <a class="btn primary" href="index.html#contact"><span data-i18n="pr.cta.b">Get in touch</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Sweet Arts — <span data-i18n="foot.rights">All rights reserved.</span></span>
+    <span data-i18n="foot.note">Please do not use or repost my art without permission.</span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/i18n-prices.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@ from xml.sax.saxutils import escape
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PLACEHOLDER = 'https://YOUR-USERNAME.github.io/YOUR-REPO/'
-PAGES = ['', 'gallery.html']          # add 'prices.html' here when the prices page is ready
+PAGES = ['', 'gallery.html', 'prices.html']
 IMG = re.compile(r'\.(jpe?g|png|webp|gif|avif|bmp)$', re.I)
 
 

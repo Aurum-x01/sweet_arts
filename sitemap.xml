@@ -10,4 +10,8 @@
     <image:image><image:loc>https://aurum-x01.github.io/sweet_arts/photos/girl.jpg</image:loc></image:image>
     <image:image><image:loc>https://aurum-x01.github.io/sweet_arts/photos/sticker.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://aurum-x01.github.io/sweet_arts/prices.html</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
 </urlset>
