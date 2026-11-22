@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sweet Arts — Digital Art Portfolio</title>
+<meta name="description" content="Portfolio of a digital artist: illustration, character design, concept art. Commissions open.">
+<meta name="theme-color" content="#07070d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<canvas id="bg"></canvas>
+<div class="blobs"><i></i><i></i><i></i></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html">SWEET <b>ARTS</b></a>
+  <nav class="menu" id="menu">
+    <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+    <a href="gallery.html" data-nav="gallery" data-i18n="nav.gallery">Gallery</a>
+    <a href="prices.html" data-nav="prices" data-i18n="nav.prices">Prices</a>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="uk">UA</button></div>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <span class="kicker" data-i18n="hero.kicker">Digital artist · Illustrator · Character designer</span>
+      <h1>
+        <span class="line"><span data-i18n="hero.t1">I paint worlds</span></span>
+        <span class="line"><span data-i18n="hero.t2">that feel alive.</span></span>
+      </h1>
+      <p class="lead" data-i18n="hero.text">Hi, welcome to Sweet Arts. I create bold, atmospheric digital artwork — characters, creatures, landscapes and everything in between. Browse the gallery or commission something made just for you.</p>
+      <div class="actions">
+        <a class="btn primary" href="gallery.html"><span data-i18n="hero.cta1">Explore the gallery</span></a>
+        <a class="btn ghost" href="prices.html"><span data-i18n="hero.cta2">Commission prices</span></a>
+      </div>
+    </div>
+    <div class="hero-art" id="heroFloat" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="fr fa" data-d="30"><div class="fr-in g1"></div></div>
+      <div class="fr fb" data-d="60"><div class="fr-in g2"></div></div>
+      <div class="fr fc" data-d="18"><div class="fr-in g3"></div></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span data-i18n="mq1">Digital Illustration</span><span data-i18n="mq2">Character Design</span><span data-i18n="mq3">Concept Art</span><span data-i18n="mq4">Fantasy Worlds</span><span data-i18n="mq5">Commissions Open</span>
+      <span data-i18n="mq1">Digital Illustration</span><span data-i18n="mq2">Character Design</span><span data-i18n="mq3">Concept Art</span><span data-i18n="mq4">Fantasy Worlds</span><span data-i18n="mq5">Commissions Open</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="what.kicker">What I do</span>
+        <h2 data-i18n="what.title">Art for stories, games & people</h2>
+      </div>
+      <div class="grid-4 stagger">
+        <div class="card" data-tilt><div class="ico">🎨</div><h3 data-i18n="c1.t">Digital illustration</h3><p data-i18n="c1.p"></p></div>
+        <div class="card" data-tilt><div class="ico"><img src="photos/girl.jpg" alt="art" style="border-radius: 15px;"></div><h3 data-i18n="c2.t">Character design</h3><p data-i18n="c2.p"></p></div>
+        <div class="card" data-tilt><div class="ico">🏔️</div><h3 data-i18n="c3.t">Concept art & environments</h3><p data-i18n="c3.p"></p></div>
+        <div class="card" data-tilt><div class="ico"><img src="photos/sticker.jpg" alt="sticker" style="border-radius: 15px;"></div><h3 data-i18n="c4.t">Avatars, emotes & logos</h3><p data-i18n="c4.p"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker" data-i18n="proc.kicker">How it works</span>
+        <h2 data-i18n="proc.title">From idea to finished piece</h2>
+      </div>
+      <div class="grid-3 stagger">
+        <div class="card step" data-tilt><h3 data-i18n="p1.t">1. Brief</h3><p data-i18n="p1.p"></p></div>
+        <div class="card step" data-tilt><h3 data-i18n="p2.t">2. Sketch</h3><p data-i18n="p2.p"></p></div>
+        <div class="card step" data-tilt><h3 data-i18n="p3.t">3. Final art</h3><p data-i18n="p3.p"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap stats reveal">
+      <div class="stat"><b data-count="5" data-suffix="+">0</b><span data-i18n="st1">Years drawing</span></div>
+      <div class="stat"><b data-count="300" data-suffix="+">0</b><span data-i18n="st2">Commissions done</span></div>
+      <div class="stat"><b data-count="120" data-suffix="+">0</b><span data-i18n="st3">Happy clients</span></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head head-row reveal">
+        <div>
+          <span class="kicker" data-i18n="latest.kicker">Fresh from the canvas</span>
+          <h2 data-i18n="latest.title">Latest works</h2>
+        </div>
+        <a class="link-arrow" href="gallery.html" data-i18n="latest.more">Open full gallery →</a>
+      </div>
+      <div class="latest-grid stagger" id="latest"></div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta reveal">
+        <h2 data-i18n="cta.title">Let's make something amazing.</h2>
+        <p data-i18n="cta.text"></p>
+        <!-- TODO: put your real email and social links here -->
+        <!-- <a class="btn primary" href="mailto:hello@example.com"><span data-i18n="cta.btn">Write me an email</span></a> -->
+        <div class="socials">
+          <a href="#">Instagram</a><a href="https://t.me/caxarok1929">Telegram</a><!--<a href="#">ArtStation</a>--><a href="#">Discord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Sweet Arts — <span data-i18n="foot.rights">All rights reserved.</span></span>
+    <span data-i18n="foot.note"></span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
